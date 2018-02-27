@@ -17,10 +17,27 @@ class ProjectTest < Minitest::Test
   end
 
   def test_it_has_project_id
-    assert_equal "1", @employee_1.project_id
-    assert_equal "2", @employee_2.project_id
-    assert_equal "3", @employee_3.project_id
+    assert_equal "1", @project_1.project_id
+    assert_equal "2", @project_2.project_id
+    assert_equal "3", @project_3.project_id
   end
 
+  def test_it_has_a_name
+    assert_equal "Widgets", @project_1.name
+    assert_equal "More Widgets", @project_2.name
+    assert_equal "Acme Project", @project_3.name
+  end
 
+  def test_it_has_a_start_date
+    assert_equal "2016-01-01", @project_1.start_date
+    assert_equal "2016-12-01", @project_2.start_date
+    assert_equal "2017-04-01", @project_3.start_date
+  end
+
+  def test_it_has_a_end_date
+    assert_equal "2016-06-30", @project_1.end_date
+    assert_equal "2017-07-21", @project_2.end_date
+    assert_equal "2018-01-28", @project_3.end_date
+  end
+  
 end
