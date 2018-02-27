@@ -25,8 +25,20 @@ class EmployeeTest < Minitest::Test
   end
 
   def test_it_has_a_role
-    assert_equal "Susan Smith", @employee_1.role
-    assert_equal "John Smith", @employee_2.role
+    assert_equal "Manager", @employee_1.role
+    assert_equal "Engineer", @employee_2.role
   end
-  
+
+  def test_it_has_a_start_date
+    assert_equal "2016-01-01", @employee_1.start_date
+    assert_equal "2016-01-01", @employee_2.start_date
+  end
+
+  def test_it_has_a_end_date
+    assert_equal "2018-02-20", @employee_1.end_date
+    assert_equal "2018-02-20", @employee_2.end_date
+  end
+
+
+
 end
